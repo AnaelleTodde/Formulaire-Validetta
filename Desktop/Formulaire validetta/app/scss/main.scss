@@ -1,0 +1,110 @@
+@import "custom";
+@import "bootstrap";
+@import "validetta";
+
+.validetta-error input{
+    /*background-color: $red;
+    color: white;*/
+    
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/b/ba/Red_x.svg);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: right;
+}
+.validetta-valid input{
+    /*background-color: $green;
+    color: white;*/
+    background-image: url(http://chittagongit.com//images/v-icon/v-icon-10.jpg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: turquoise;
+}
+#box{
+    height: 200px;
+    width: 1000px;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#main{
+    height: 800px;
+    width: 450px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+}
+#loginform, #form{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+}
+#form{
+    top: 45%;
+    visibility: hidden;
+}
+#loginform h1, #form h1{
+    font-size: 30px;
+    color: turquoise;
+}
+#loginform input, #form input:not(#cg){
+    height: 40px;
+    width: 300px;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin: 5px;
+}
+#loginform button, #form button{
+    background-color: turquoise;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 210px;
+}
+#submit_login, #submit_sign{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    left: 75%;
+    top: 65%;
+    transform: translate(-50%,-50%);
+    transition: all .5s;
+}
+#submit_sign{
+    left: 25%;
+}
+#submit_login:hover, #submit_sign:hover{
+    background-color: white;
+    color: #2d2d2d;
+    cursor: pointer;
+}
+#msg_login, #msg_sign{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+#msg_sign{
+    left: 25%;
+}

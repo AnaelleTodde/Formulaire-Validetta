@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulaire Bootstrap</title>
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+    
+<div id="box">
+    <div id="main"></div>
+    
+    
+    <form id="loginform">
+        <h1>Se connecter</h1>
+        <input id="mail" placeholder="Votre email" data-validetta="required"><br>
+        <input id="mdp3" type="password" placeholder="Mot de passe" data-validetta="required,minLength[6]"><br>
+        <button class="btn">Connexion</button>
+    </form>
+    
+    
+    <form id="form">
+    <h1>S'inscrire</h1>	
+<input id="nom" placeholder="Nom"><br>
+<input id="prenom" placeholder="Prénom"><br>
+<input id="datepicker" placeholder="Date de naissance"><br>   
+<input id="adresse" placeholder="Adresse"><br>
+<input id="cp" placeholder="Code postal"><br>
+<input id="ville" placeholder="Ville"><br>
+ <div>   
+<input id="email" placeholder="Votre email" data-validetta="required">
+ </div><br>
+<input id="mdp" type="password" placeholder="Mot de passe" name="mdp" data-validetta="required,minLength[6]"><br>
+<input id="mdp2" type="password" placeholder="Confirmation" data-validetta="required,equalTo[mdp]"><br>
+
+<input id="cg" type="checkbox" name="cg" value="cg" data-validetta="minChecked[1]">J'ai lu et accepte les conditions générales<br> 
+<button type="submit" id="submit" class="btn">S'inscrire</button>
+</form>
+    
+<div id="msg_login">Vous avez un compte.</div>   
+<div id="msg_sign">Vous n'avez pas de compte.</div>   
+<button type="submit" id="submit_sign" class="btn">S'inscrire</button>
+<button type="submit" id="submit_login" class="btn">Connexion</button>
+</div>    
+    
+    
+    
+
+
+	
+
+	
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/validetta.min.js"></script>
+<script src="js/validettaLang-fr-FR.js"></script>
+<script src="js/scripts.js"></script>		
+</body>
+</html>
