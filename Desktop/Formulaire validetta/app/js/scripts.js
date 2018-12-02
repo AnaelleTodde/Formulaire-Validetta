@@ -23,7 +23,7 @@ jQuery(function($){
 		showButtonPanel: true,
         showAnim: 'fold',
         showOn: "button",
-        buttonImage: "../css/images/calendar.gif",
+        buttonImage: "css/images/calendar.gif",
         buttonImageOnly: true,
         buttonText: "Select date",
         changeMonth: true,
@@ -39,7 +39,7 @@ $(function(){
 $("#datepicker").datepicker();
 /*------------------Code Postal-----------------------------------*/       
     $.ajax({
-        url: '../json/cities.json',
+        url: 'json/cities.json',
         method:"GET",
         dataType: "json",
         success:function(monObjet){
@@ -82,7 +82,7 @@ $("#datepicker").datepicker();
     
 /*------------------Ville-----------------------------------*/       
     $.ajax({
-        url: '../json/cities.json',
+        url: 'json/cities.json',
         method:"GET",
         dataType: "json",
         success:function(monObjet){
@@ -132,6 +132,36 @@ $('#form, #loginform').validetta({
  
  // ici faire la requête ajax
 
+      
+      var donnees = $("#form, #loginform").serialize();	  
+ $.ajax({
+   	 // 1) on définit le fichier vers lequel on envoye la requête POST
+       url : "php.php",
+	
+	// 2/ on spécifie la méthode  
+       type : 'POST', // Le type de la requête HTTP, ici  POST
+    
+	// 3) on définit les variables POST qui sont ennvoyées au fichier .php qui les récupère sous forme de $_POST["nom"] 
+	  data : donnees, // On fait passer nos variables au script coucou.php
+     
+	 // 4) format de retour du fichier php dans "data"
+	   dataType : 'html',
+	   
+	   // 5) fonction à effectuer en cas de succès
+	   success : function(data){ //  contient le HTML renvoyé
+        
+		
+		$('#contenu').html(data);  
+		$('#form,#main,#box').hide();
+		 
+       
+	   
+	   } // success
+   
+   
+   }); // $.ajax function
+      
+      
  
  }, // valid
   onError : function( event ){

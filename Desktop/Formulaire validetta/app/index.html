@@ -16,25 +16,25 @@
     
     <form id="loginform">
         <h1>Se connecter</h1>
-        <input id="mail" placeholder="Votre email" data-validetta="required"><br>
-        <input id="mdp3" type="password" placeholder="Mot de passe" data-validetta="required,minLength[6]"><br>
+        <input id="mail" name="email" placeholder="Votre email" data-validetta="required"><br>
+        <input id="mdp3" name="mdp" type="password" placeholder="Mot de passe" data-validetta="required,minLength[6]"><br>
         <button class="btn">Connexion</button>
     </form>
     
     
     <form id="form">
     <h1>S'inscrire</h1>	
-<input id="nom" placeholder="Nom"><br>
-<input id="prenom" placeholder="Prénom"><br>
-<input id="datepicker" placeholder="Date de naissance"><br>   
-<input id="adresse" placeholder="Adresse"><br>
-<input id="cp" placeholder="Code postal"><br>
-<input id="ville" placeholder="Ville"><br>
+<input id="nom" name="nom" placeholder="Nom"><br>
+<input id="prenom" name="prenom" placeholder="Prénom"><br>
+<input id="datepicker" name="date" placeholder="Date de naissance"><br>   
+<input id="adresse" name="adresse" placeholder="Adresse"><br>
+<input id="cp" name="cp" placeholder="Code postal"><br>
+<input id="ville" name="ville" placeholder="Ville"><br>
  <div>   
-<input id="email" placeholder="Votre email" data-validetta="required">
+<input id="email" name="email" placeholder="Votre email" data-validetta="required">
  </div><br>
-<input id="mdp" type="password" placeholder="Mot de passe" name="mdp" data-validetta="required,minLength[6]"><br>
-<input id="mdp2" type="password" placeholder="Confirmation" data-validetta="required,equalTo[mdp]"><br>
+<input id="mdp" name="mdp" type="password" placeholder="Mot de passe" name="mdp" data-validetta="required,minLength[6]"><br>
+<input id="mdp2" name="mdp2" type="password" placeholder="Confirmation" data-validetta="required,equalTo[mdp]"><br>
 
 <input id="cg" type="checkbox" name="cg" value="cg" data-validetta="minChecked[1]">J'ai lu et accepte les conditions générales<br> 
 <button type="submit" id="submit" class="btn">S'inscrire</button>
@@ -48,8 +48,7 @@
     
     
     
-
-
+<div id="contenu"></div>
 	
 
 	
